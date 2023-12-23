@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>in.co.vwits</groupId>
+  <artifactId>EmployeeManagement</artifactId>
+  <version>1.0.0-RELEASE</version>
+  
+ <properties>
+	  <maven.compiler.target>21</maven.compiler.target>
+	  <maven.compiler.source>21</maven.compiler.source>
+<!--	  Following tags are user defined tag-->
+	  <jackson.version>2.15.2</jackson.version>
+	  <mysql.version>8.0.29</mysql.version>
+	  <spring.version>5.3.23</spring.version>
+	  <hibernate.version>5.4.2.Final</hibernate.version>  
+  </properties>
+  
+  <!--While using multiple different frameworks in a single project, it is very much necessary to check 
+      compatibility of both project versions.This is cucial to remmeber while choosing
+      framework version.
+      NOTE: In this project we have downloaded HIbernate version from 6 to 5 because
+      Spring V% doesn't support hibernate V6
+  -->
+    <dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>${mysql.version}</version>
+  </dependency>
+  
+  <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>${jackson.version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>${jackson.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-envers -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>${hibernate.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>${spring.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>${spring.version}</version>
+</dependency>
+
+
+  </dependencies>
+  
+   </project>
+
